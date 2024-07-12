@@ -1,5 +1,7 @@
 import Header from "../Shared/Header/Header";
+import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
+import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 
 
 const Home = () => {
@@ -7,7 +9,13 @@ const Home = () => {
         <div>
             <Header></Header>
             <Navbar></Navbar>
-            <h2 className="text-3xl font-Poppins font-bold">This is Home</h2>
+            <div>
+                <LeftSideNav></LeftSideNav>
+            </div>
+            <div></div>
+            <div>
+                <RightSideNav></RightSideNav>
+            </div>
         </div>
     );
 };
