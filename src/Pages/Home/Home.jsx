@@ -9,12 +9,16 @@ const Home = () => {
         <div>
             <Header></Header>
             <Navbar></Navbar>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
             <div>
                 <LeftSideNav></LeftSideNav>
             </div>
-            <div></div>
-            <div>
+            <div className="col-span-2">
+                <h2>news coming soon.....</h2>
+            </div>
+            <div className="border">
                 <RightSideNav></RightSideNav>
+            </div>
             </div>
         </div>
     );
