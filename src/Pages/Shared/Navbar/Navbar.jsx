@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import userImage from '../../../assets/user.png'
 
 const navLink = <>
      <li><NavLink to='/'>Home</NavLink></li>
@@ -37,7 +38,16 @@ const Navbar = () => {
     {navLink}
     </ul>
   </div>
+ 
   <div className="navbar-end">
+     {/* login photo is here */}
+  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src={userImage}/>
+        </div>
+      </div>
     <Link>
      <button className="btn">Login</button>
     </Link>
