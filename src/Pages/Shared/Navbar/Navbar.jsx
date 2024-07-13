@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
       </div>
     <Link>
-     <button className="btn">Login</button>
+     <button className="p-4 btn">Login</button>
     </Link>
   </div>
 </div>

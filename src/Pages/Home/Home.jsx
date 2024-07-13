@@ -13,10 +13,10 @@ const Home = () => {
             <Navbar></Navbar>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
-            <div>
+            <div className="border">
                 <LeftSideNav></LeftSideNav>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 border">
                 <h2>news coming soon.....</h2>
             </div>
             <div className="border">
