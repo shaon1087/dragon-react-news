@@ -1,10 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import userImage from '../../../assets/user.png'
 
+
 const navLink = <>
      <li><NavLink to='/'>Home</NavLink></li>
      <li><NavLink to='/About'>About</NavLink></li>
      <li><NavLink to='/Career'>Career</NavLink></li>
+     <li><NavLink to='/Login'>Login</NavLink></li>
 </>
 const Navbar = () => {
     return (
@@ -48,7 +50,7 @@ const Navbar = () => {
             src={userImage}/>
         </div>
       </div>
-    <Link>
+    <Link to='./Login'>
      <button className="p-4 btn">Login</button>
     </Link>
   </div>
