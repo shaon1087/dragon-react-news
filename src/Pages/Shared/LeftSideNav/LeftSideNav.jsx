@@ -1,6 +1,7 @@
 
 import {useState,useEffect} from "react";
 const LeftSideNav = () => {
+    // added some changes
     const [categories,setCategories] = useState([]);
     useEffect(()=>{
         fetch('categories.json')
