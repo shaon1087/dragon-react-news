@@ -13,6 +13,7 @@ const Login = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <div>
             <h2 className="text-3xl my-10 text-center">Login your account</h2>
             <form onSubmit={ handleLogin} className="lg:w-1/2 md:h-3/4 mx-auto">
             <div className="form-control">
@@ -34,7 +35,8 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
             </form>
-            <p className="text-xl text-center mt-4 ">Dont have an account? <Link className="text-blue-600 font-bold" to="./register">Register</Link></p>
+            <p className="text-xl text-center mt-4 ">Dont have an account? <Link to='/Registration' className="text-blue-600 font-bold">Register</Link></p>
+            </div>
             
       
         </div>
