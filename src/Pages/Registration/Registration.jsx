@@ -7,7 +7,12 @@ const Registration = () => {
         e.preventDefault();
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
-        console.log(form);
+        const name = form.get('name');
+        const photo = form.get('photo');
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(email, password, name, photo);
+       
     }
     return (
        
@@ -38,7 +43,7 @@ const Registration = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="passwprd" placeholder="password" className="input input-bordered" required />
+          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
