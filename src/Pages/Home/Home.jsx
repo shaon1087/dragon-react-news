@@ -4,6 +4,7 @@ import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews/BreakingNews";
+import NewaCart from "./NewsCart";
 
 
 const Home = () => {
@@ -21,8 +22,15 @@ const Home = () => {
                 <LeftSideNav></LeftSideNav>
             </div>
             {/* all news are here */}
-            <div className="col-span-2 border">
-                <h2>News coming soon.....</h2>
+            <div className="md:col-span-2 border">
+                {
+                    news.map(aNews => <NewaCart
+                    key={aNews.id}
+                    news={aNews}
+                    >
+
+                    </NewaCart>)
+                }
             </div>
             <div>
                 <RightSideNav></RightSideNav>
