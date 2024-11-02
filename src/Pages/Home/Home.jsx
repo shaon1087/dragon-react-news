@@ -4,7 +4,7 @@ import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews/BreakingNews";
-import NewaCart from "./NewsCart";
+import NewsCart from "./NewsCart";
 
 
 const Home = () => {
@@ -24,12 +24,12 @@ const Home = () => {
             {/* all news are here */}
             <div className="md:col-span-2 border">
                 {
-                    news.map(aNews => <NewaCart
+                    news.map(aNews => <NewsCart
                     key={aNews.id}
                     news={aNews}
                     >
 
-                    </NewaCart>)
+                    </NewsCart>)
                 }
             </div>
             <div>
