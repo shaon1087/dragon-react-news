@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigation } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -7,6 +7,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigation();
+  console.log('login ', location);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -18,6 +21,9 @@ const Login = () => {
         signIn(email, password)
         .then(result =>{
           console.log(result.user);
+
+          // navigate after login
+          navigate(location?.state ? location.state : '/' );
         })
         .catch(err =>{
           console.error();
@@ -40,7 +46,7 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="passwprd" placeholder="password" className="input input-bordered" required />
+          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
