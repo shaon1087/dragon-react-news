@@ -5,6 +5,7 @@ import Header from "../Shared/Header/Header";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import LodeSingleNews from "../Home/LOdeSIngleNews";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
+import Navbar from "../Shared/Navbar/Navbar";
 
 
 const NewsCategory = () => {
@@ -31,6 +32,7 @@ const NewsCategory = () => {
   return (
     <div>
       <Header />
+      <Navbar></Navbar>
       <div className="grid grid-cols-1 justify-center items-start gap-5 lg:grid-cols-4">
         <LeftSideNav className="col-span-1" />
         <div className="col-span-2">

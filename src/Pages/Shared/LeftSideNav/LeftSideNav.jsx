@@ -35,7 +35,7 @@ const LeftSideNav = () => {
       <div className="my-5 flex flex-col gap-5">
         <div className="card card-compact w-full bg-base-100 shadow-xl rounded-md">
           <figure>
-            <img src="/1.png" alt="Shoes" />
+            <img src="/src/assets/1.png" alt="Shoes" />
           </figure>
           <div className="card-body">
             <Link className="card-title font-semibold text-lg hover:text-blue-700">
@@ -53,7 +53,7 @@ const LeftSideNav = () => {
 
         <div className="card card-compact w-full bg-base-100 shadow-xl rounded-md">
           <figure>
-            <img src="/2.png" alt="card" />
+            <img src="/src/assets/2.png" alt="card" />
           </figure>
           <div className="card-body">
             <Link className="card-title font-semibold text-lg  hover:text-blue-700">
@@ -71,7 +71,7 @@ const LeftSideNav = () => {
 
         <div className="card card-compact w-full bg-base-100 shadow-xl rounded-md">
           <figure>
-            <img src="/3.png" alt="Card" />
+            <img src="/src/assets/3.png" alt="Card" />
           </figure>
           <div className="card-body">
             <Link className="card-title font-semibold text-lg  hover:text-blue-700">

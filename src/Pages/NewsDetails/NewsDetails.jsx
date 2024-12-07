@@ -3,7 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "../Shared/Header/Header";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
-import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
+import Navbar from "../Shared/Navbar/Navbar";
 
 const NewsDetails = () => {
   const [lodeDetails, setDetails] = useState("");
@@ -21,7 +21,7 @@ const NewsDetails = () => {
   return (
     <div>
       <Header></Header>
-      <LeftSideNav className="col-span-1" />
+      <Navbar></Navbar>
       <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-4">
         <div className="md:col-span-2 lg:col-span-3">
           <h2 className="text-2xl font-semibold mb-3"> Dragon News</h2>
