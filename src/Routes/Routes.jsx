@@ -3,8 +3,11 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
-import News from "../Pages/News/News";
 import PrivateRoutes from "./PrivateRoutes";
+import Career from "../Pages/Career/Career";
+import About from "../Pages/About/About";
+import NewsCategory from "../Pages/NewsCategory/NewsCategory";
+import NewsDetails from "../Pages/NewsDetails/NewsDetails";
 
 
 
@@ -12,6 +15,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <div>This page Under Development</div>,
     children: [
       {
         path: "/",
@@ -19,12 +23,12 @@ const routes = createBrowserRouter([
         loader: () => fetch("/news.json"),
       },
       {
-        path: "/news/:id",
-        element: (
-          <PrivateRoutes>
-            <News></News>
-          </PrivateRoutes>
-        ),
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/career",
+        element: <Career></Career>,
       },
       {
         path: "/Login",
@@ -33,6 +37,19 @@ const routes = createBrowserRouter([
       {
         path: "/Registration",
         element: <Registration></Registration>,
+      },
+      {
+         path: '/category/:id',
+         element: <NewsCategory></NewsCategory>,
+         loader: ()=>fetch('/news.json')
+      },
+      {
+        path: "/news/:id",
+        element: 
+          <PrivateRoutes>
+            <NewsDetails></NewsDetails>
+          </PrivateRoutes>,
+          loader: ()=>fetch('/news.json')
       },
     ],
   },
