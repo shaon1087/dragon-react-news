@@ -8,7 +8,6 @@ const navLink = <>
      <li><NavLink to='/'>Home</NavLink></li>
      <li><NavLink to='/About'>About</NavLink></li>
      <li><NavLink to='/Career'>Career</NavLink></li>
-     <li><NavLink to='/Login'>Login</NavLink></li>
 </>
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -19,6 +18,7 @@ const Navbar = () => {
 
 
     }
+    
     return (
       <div className="pt-8">
         <div className="navbar bg-base-100">
@@ -46,7 +46,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {navLink}
               </ul>
@@ -56,7 +56,7 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{navLink}</ul>
           </div>
 
-          <div className="navbar-end">
+          <div className="navbar-end flex gap-2 items-center">
             {/* login photo is here */}
             <div
               tabIndex={0}
@@ -68,7 +68,13 @@ const Navbar = () => {
               </div>
             </div>
             {user ? (
-              <button onClick={handleSignOut} className="btn"> SIGN OUT</button>
+              <button
+                onClick={handleSignOut}
+                className=" btn bg-[#D72050] hover:text-[#D72050] hover:border-[#D72050] text-white"
+              >
+                {" "}
+                SIGN OUT
+              </button>
             ) : (
               <Link to="./Login">
                 <button className="p-4 btn">LOGIN</button>

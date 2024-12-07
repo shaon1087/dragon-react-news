@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "20px",
+      },
       fontFamily: {
-        Poppins: "'Poppins', sans-serif" 
-      }
+        poppins: "'Poppins', sans-serif;",
+      },
     },
   },
-  plugins: [require('daisyui'),],
-}
-
+  daisyui: {
+    themes: [ "cupcake"],
+  },
+  plugins: [require("daisyui")],
+};
