@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import { BsBookmarkHeart, BsFillShareFill } from "react-icons/bs";
 import { AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";

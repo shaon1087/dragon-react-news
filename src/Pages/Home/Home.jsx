@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
+
 import Header from "../Shared/Header/Header";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews/BreakingNews";
-import LodeSingleNews from "./LOdeSIngleNews";
+import LodeSingleNews from "./LodeSIngleNews";
 
 
 
@@ -39,23 +41,23 @@ const Home = () => {
       </div>
     );
 };
-// LodeSingleNews.propTypes = {
-//   singleNews: PropTypes.shape({
-//     _id: PropTypes.string.isRequired, // Assuming _id is a string and unique
-//     title: PropTypes.string.isRequired,
-//     image_url: PropTypes.string.isRequired,
-//     details: PropTypes.string.isRequired,
-//     total_view: PropTypes.number.isRequired,
-//     author: PropTypes.shape({
-//       name: PropTypes.string.isRequired,
-//       published_date: PropTypes.string.isRequired,
-//       img: PropTypes.string.isRequired,
-//     }).isRequired,
-//     rating: PropTypes.shape({
-//       number: PropTypes.number.isRequired,
-//       badge: PropTypes.string.isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// };
+LodeSingleNews.propTypes = {
+  singleNews: PropTypes.shape({
+    _id: PropTypes.string.isRequired, // Assuming _id is a string and unique
+    title: PropTypes.string.isRequired,
+    image_url: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    total_view: PropTypes.number.isRequired,
+    author: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      published_date: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+    }).isRequired,
+    rating: PropTypes.shape({
+      number: PropTypes.number.isRequired,
+      badge: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default Home;

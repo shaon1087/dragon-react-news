@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "../Shared/Header/Header";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
-import LodeSingleNews from "../Home/LOdeSIngleNews";
+import LodeSingleNews from "../Home/LodeSIngleNews";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
 
