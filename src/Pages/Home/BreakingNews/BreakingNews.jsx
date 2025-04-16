@@ -6,7 +6,7 @@ const BreakingNews = () => {
         <div className="flex border">
             <button className="btn btn-secondary px-8">Latest</button>
             <Marquee pauseOnHover={true} speed={150}>
-            <Link className="mr-10" to='/'>Match Highlights: Germany vs Spain — as it happened..</Link>
+            <Link className="mr-10" to='/'>Match Highlights: Real-madrid vs Arsenal — as it happened..</Link>
             <Link className="mr-10" to='/'>Match Highlights: Germany vs Spain — as it happened..</Link>
             <Link className="mr-10" to='/'>Match Highlights: Germany vs Spain — as it happened..</Link>
             
